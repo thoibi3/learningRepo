@@ -34,7 +34,7 @@ resource "aws_lambda_permission" "lambda_s3_invoke_perm" {
   function_name  = "testlamda"
   principal      = "s3.amazonaws.com"
   source_account = "595374584249"
-  source_arn = aws_s3_bucket.my_s3_bucket.arn
+  source_arn     = aws_s3_bucket.my_s3_bucket.arn
 
   # source_arn     = "arn:aws:s3:::raja.s3.newbucket"
 }
