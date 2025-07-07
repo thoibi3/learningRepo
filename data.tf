@@ -14,5 +14,4 @@ data "archive_file" "zipfile" {
   type        = "zip"
   source_dir  = "${path.module}/python/"
   output_path = "${path.module}/python/handler.zip"
-
 }
