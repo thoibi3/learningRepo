@@ -1,6 +1,6 @@
 variable "s3_main_bucket" {
   type    = string
-  default = "demo.s3.bucketjunetest"
+  default = "demo.s3.bucketjunetestt"
 }
 
 variable "lambda_iam_role_name" {
@@ -17,7 +17,7 @@ variable "s3_lamda_trigger_name" {
 
 variable "functionname" {
   type    = string
-  default = "testlamda"
+  default = "testlamdat"
 }
 
 variable "create_bucket" {
