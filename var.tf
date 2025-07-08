@@ -18,5 +18,3 @@ variable "s3_lamda_trigger_name" {
 
 
 
-
-
