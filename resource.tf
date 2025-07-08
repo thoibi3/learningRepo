@@ -1,6 +1,8 @@
+
 resource "aws_s3_bucket" "my_s3_bucket" {
   bucket        = var.s3_main_bucket
   force_destroy = true
+  count  = var.create_bucket ? 1 : 0
 }
 
 
