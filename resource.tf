@@ -30,7 +30,7 @@ resource "aws_s3_bucket_notification" "bucket_notification" {
   depends_on = [aws_lambda_permission.lambda_s3_invoke_perm]
 
   lambda_function {
-    lambda_function_arn = "arn:aws:lambda:us-east-1:595374584249:function:testlamda"
+    lambda_function_arn = "arn:aws:lambda:us-east-1:595374584249:function:${var.functionname}"
     events              = ["s3:ObjectCreated:*"]
     #  filter_prefix =  "inputFiles/"
 
