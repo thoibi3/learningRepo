@@ -62,7 +62,7 @@ jobs:
         run: |
           mkdir package
           pip install -r requirements.txt -t package/
-          cp ../lamdahandler.py package/
+          cp /python/lamdahandler.py package/
           cd package && zip -r ../lambda.zip .
 
       - name: Upload Artifact
