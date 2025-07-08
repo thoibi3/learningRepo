@@ -1,6 +1,6 @@
 variable "s3_main_bucket" {
   type    = string
-  default = "demmobucket"
+  default = "demo.s3.bucketjune"
 }
 
 variable "lambda_iam_role_name" {
@@ -19,5 +19,3 @@ variable "functionname" {
   type    = string
   default = "testlamda"
 }
-
-
