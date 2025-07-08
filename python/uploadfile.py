@@ -3,7 +3,7 @@ import logging
 
 bucket_name = 'raja.s3.newbucket'
 file_path = 'test_file.txt'             # Local file to upload
-s3_key = 'uploads/test_file.txt       # Path in S3 S3
+s3_key = 'uploads/test_file.txt'       # Path in S3 S3
 
 
 # Create an S3 client
