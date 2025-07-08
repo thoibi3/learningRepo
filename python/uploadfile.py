@@ -1,7 +1,7 @@
 import boto3
 import logging
 
-bucket_name = 'raja.s3.newbucket'
+bucket_name = 'Demo.s3.newbucket'
 file_path = 'test_file.txt'             # Local file to upload
 s3_key = 'uploads/test_file.txt'       # Path in S3 S3
 

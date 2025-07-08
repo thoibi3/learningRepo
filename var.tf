@@ -1,7 +1,6 @@
 variable "s3_main_bucket" {
   type        = string
-  description = "raja.s3.newbucket"
-  default     = "raja.s3.newbucket"
+  default     = "Demo.s3.newbucket"
 }
 
 variable "lambda_iam_role_name" {
@@ -16,5 +15,9 @@ variable "s3_lamda_trigger_name" {
   description = "s3_lamda_trigger_name"
 }
 
+variable "functionname" {
+  type        = string  
+  default     = "testlamda"
+}
 
 
