@@ -63,7 +63,7 @@ jobs:
           mkdir package
           pip install -r requirements.txt -t package/
           cp lamdahandler.py package/
-          cd package && zip -r ../lambda.zip . -x "*.pyc" -x "__pycache__/*" -x "*.pyo" -x "*.dist-info/*" -x "*.egg-info/*" -x "tests/*" -x ".git/*" -x ".venv/*"
+          cd package && zip -r ../lambda.zip .
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
