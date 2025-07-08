@@ -12,6 +12,6 @@ data "aws_iam_role" "lambda_iamrolename" {
 
 data "archive_file" "zipfile" {
   type        = "zip"
-  source_dir  = "${path.module}/"
-  output_path = "${path.module}/handler.zip"
+  source_dir  = "${path.module}/python/"
+  output_path = "${path.module}/python/handler.zip"
 }
