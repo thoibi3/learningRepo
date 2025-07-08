@@ -21,7 +21,8 @@ resource "aws_lambda_permission" "lambda_s3_invoke_perm" {
   function_name  = var.functionname
   principal      = "s3.amazonaws.com"
   source_account = "595374584249"
-  source_arn     = aws_s3_bucket.my_s3_bucket.arn
+  # source_arn     = aws_s3_bucket.my_s3_bucket.arn
+  source_arn = var.create_bucket ? aws_s3_bucket.my_s3_bucket[0].arn : "arn:aws:s3:::${var.s3_main_bucket}"
 }
 
 resource "aws_s3_bucket_notification" "bucket_notification" {

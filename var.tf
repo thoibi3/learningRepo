@@ -22,5 +22,5 @@ variable "functionname" {
 
 variable "create_bucket" {
   type    = bool
-  default = true # Set to false if the bucket already exists
+  default = true
 }
