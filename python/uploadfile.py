@@ -13,3 +13,4 @@ try:
     print(f"File uploaded successfully to s3://{bucket_name}/{s3_key}")
 except Exception as e:
     print(f"Upload failed: {e}")
+    
