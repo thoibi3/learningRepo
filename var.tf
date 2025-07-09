@@ -1,6 +1,6 @@
 variable "s3_main_bucket" {
   type    = string
-  default = "demo.s3.bucketjunetestt"
+  default = "demo.s3.bucketmain"
 }
 
 variable "lambda_iam_role_name" {

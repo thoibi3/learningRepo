@@ -1,9 +1,9 @@
 
-# resource "aws_s3_bucket" "my_s3_bucket" {
-#   bucket        = var.s3_main_bucket
-#   force_destroy = true
-#   count         = var.create_bucket ? 1 : 0
-# }  
+resource "aws_s3_bucket" "my_s3_bucket" {
+  bucket        = var.s3_main_bucket
+  force_destroy = true
+  count         = var.create_bucket ? 1 : 0
+}
 
 
 resource "aws_lambda_function" "createlamda" {
@@ -22,11 +22,11 @@ resource "aws_lambda_permission" "lambda_s3_invoke_perm" {
   principal      = "s3.amazonaws.com"
   source_account = "595374584249"
   # source_arn     = aws_s3_bucket.my_s3_bucket.arn
-  source_arn = data.aws_s3_bucket.main_bucket_id.id
+  source_arn = aws_s3_bucket.my_s3_bucket.arn
 }
 
 resource "aws_s3_bucket_notification" "bucket_notification" {
-  bucket     = data.aws_s3_bucket.main_bucket_id.id
+  bucket     = var.s3_main_bucket
   depends_on = [aws_lambda_permission.lambda_s3_invoke_perm]
 
   lambda_function {
@@ -38,7 +38,7 @@ resource "aws_s3_bucket_notification" "bucket_notification" {
 }
 
 resource "aws_s3_bucket_versioning" "versioning" {
-  bucket = data.aws_s3_bucket.main_bucket_id.id
+  bucket = var.s3_main_bucket
   versioning_configuration {
     status = "Enabled"
   }
