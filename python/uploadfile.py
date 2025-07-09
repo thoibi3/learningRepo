@@ -1,7 +1,7 @@
 import boto3
 import logging
 
-bucket_name = 'demo.s3.bucketjune'
+bucket_name = 'demo.s3.bucketmain'
 file_path = 'test_file.txt'             # Local file to upload
 s3_key = 'uploads/test_file.txt'       # Path in S3 S3
 

@@ -24,3 +24,8 @@ variable "create_bucket" {
   type    = bool
   default = true
 }
+
+variable "log_group_name" {
+  type    = string
+  default = "groupnametest"
+}
