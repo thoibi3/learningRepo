@@ -1,9 +1,5 @@
 # data "aws_caller_identity" "current" {}
 
-data "aws_s3_bucket" "main_bucket_id" {
-  bucket = var.s3_main_bucket
-}
-
 data "aws_iam_role" "lambda_iamrolename" {
   name = "lamdaiamrole"
 }
